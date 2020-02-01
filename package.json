@@ -1,0 +1,8 @@
+{
+  "name": "mean-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/solvera-infra/mean-stack.git",
+  "author": "dwikiarlan <arrlancore@gmail.com>",
+  "license": "MIT"
+}
