@@ -1,6 +1,17 @@
 # MeanCourse
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
+
+How to use
+----------
+
+Run "npm install" inside this project folder to install all dependencies.
+
+Make sure you use the latest version of the CLI
+
+Run "ng serve" to see the app in action (try "npm start" in case "ng serve" fails).
+
+Feel free to compare it with your project code to spot any errors you might have.
 
 ## Development server
 
