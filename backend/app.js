@@ -6,16 +6,13 @@ const Post = require("./models/post");
 
 const app = express();
 
-mongoose
-  .connect(
-    "url"
-  )
-  .then(() => {
-    console.log("Connected to database!");
-  })
-  .catch(() => {
-    console.log("Connection failed!");
-  });
+mongoose.connect(
+  "mongodb+srv://mdb:tJc8QwpBmsUuZxpX@cluster0-zrsxe.mongodb.net/test?retryWrites=true&w=majority"
+).then(() => {
+  console.log("Connected to database!");
+}).catch(() => {
+  console.log("Connection failed!");
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -51,6 +48,7 @@ app.get("/api/posts", (req, res, next) => {
       posts: documents
     });
   });
+
 });
 
 app.delete("/api/posts/:id", (req, res, next) => {
@@ -59,5 +57,12 @@ app.delete("/api/posts/:id", (req, res, next) => {
     res.status(200).json({ message: "Post deleted!" });
   });
 });
+
+app.use((req, res, next) => {
+  res.status(404);
+  res.json(
+    { message: 'Endpoint not found', data: {} }
+  )
+})
 
 module.exports = app;
